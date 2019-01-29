@@ -1,6 +1,6 @@
 module Endless
 
-export @macro, @block
+export @macro, @progn
 
 macrodef =
     Expr(
