@@ -1,6 +1,6 @@
 module Endless
 
-export @macro
+export @macro, @block
 
 macrodef =
     Expr(
@@ -68,5 +68,22 @@ macrodef =
         )
     )
 eval(macrodef)
+
+"""
+    progn(args...)
+
+Block syntax without `end`. Works the same as `begin ... end` blocks.
+
+Expamples
+```julia-repl
+julia> @progn(x = 1 + 1,
+              y = x/2,
+              z = x^2 + y^2)
+5.0
+
+julia> z
+```
+"""
+@macro progn(args...) esc(Expr(:block, args...))
 
 end # module
