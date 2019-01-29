@@ -1,0 +1,4 @@
+name = "Endless"
+uuid = "fc01068e-23d2-11e9-0aa2-8790009dbe45"
+authors = ["Sakse Dalum <dalum@users.noreply.github.com>"]
+version = "0.1.0"
